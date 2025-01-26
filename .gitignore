@@ -1,0 +1,60 @@
+# Python-related files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+.my_env/
+ENV/
+
+# Django-related files
+db.sqlite3
+/media/
+staticfiles/
+*.log
+
+# IDE and editor-related files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-related files
+.DS_Store
+Thumbs.db
+
+# Docker-related files
+*.env
+docker-compose.override.yml
+
+# Byte-compiled Python files
+*.pyc
+
+# Caches
+*.cache
+*.mo
+*.pot
+*.py[co]
+__pycache__/
+
+# Migrations
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Test Coverage files
+htmlcov/
+.coverage
+.tox/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+pytestdebug.log
