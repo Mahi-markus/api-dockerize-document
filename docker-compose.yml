@@ -1,7 +1,23 @@
 services:
+  db:
+    image: postgres:13
+    container_name: mydb-container  # Container name for the database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: mahi
+      POSTGRES_PASSWORD: mahi
+
   web:
     build: .
-    ports:
-      - "8000:8000"
+    container_name: web-container  # Container name for the web application
     volumes:
       - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

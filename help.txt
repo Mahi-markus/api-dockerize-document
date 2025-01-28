@@ -1,0 +1,5 @@
+docker exec -it web-container  python manage.py makemigrations
+docker exec -it web-container  python manage.py migrate
+docker exec -it mydb-container psql -U mahi -d mydb
+select *from api_helloworld
+docker exec -it web-container  python manage.py show_urls
